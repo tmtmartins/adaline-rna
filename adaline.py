@@ -48,7 +48,7 @@ def run_tests(synaptic_weights, df):
     predicted_values = []
     for index, row in df.iterrows():
         sample = calculate_sample(synaptic_weights, row)
-        predicted_values.append(1 if sample > 0 else -1)
+        predicted_values.append("B" if sample > 0 else "A")
     df['d_predicted'] = predicted_values
     return df
 
